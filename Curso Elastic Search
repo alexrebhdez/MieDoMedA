@@ -1,0 +1,35 @@
+# Agregar un documento sin índice 
+POST /product/default
+{
+  "name" : "Processing events with Logstash",
+  "instructor" : {
+    "firtsName" : "Bo",
+    "lastName" : "Andersen"
+  }
+}
+
+# Agregar un documento con índice
+PUT /product/default/1
+{
+  "name" : "Complete Guide to Elastic Search",
+  "instructor" : {
+    "firtsName" : "Bo",
+    "lastName" : "Andersen"
+  }
+}
+
+# Recuperar un elemento por el índice
+GET /product/default/1
+
+# Reemplazar un documento por el índice
+PUT /product/default/1
+			{
+ 				 "name" : "Complete Guide to Elasticsearch",
+ 				 "instructor" : {
+ 				   "firtsName" : "Bo",
+ 				   "lastName" : "Andersen"
+ 				 },
+ 				 "price" : 195
+			}
+			
+GET /product/default/1			
